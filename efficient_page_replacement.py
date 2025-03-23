@@ -1,76 +1,76 @@
 import matplotlib.pyplot as plt # Importing matplotlib library
 
 # FIFO (First-In, First-out) page replacements Algo
-def fifo_page_rep(pages, frame):
+def Calculate_fifo_faults(pages, total_frame):
   #Initialize the variable count page fault
-    page_fault = 0
+    count = 0
     #store pages in memory
-    queue = []
+    memory_queue = []
     
     for page in pages:
-        if page not in queue:
-            if len(queue) < frame:
-                queue.append(page)
+        if page not in memory_queue:
+            if len(memory_queue) < total_frame:
+                memory_queue.append(page)
             else:
-                queue.pop(0)
-                queue.append(page)
-            page_fault += 1  # count pages fault 
+                memory_queue.pop(0)
+                memory_queue.append(page)
+            count += 1  # count pages fault 
 
-    return page_fault # return total no of page faults
+    return count # return total no of page faults
 
 # LRU (Least Recently Used) Algorithm
-def lru_page_rep(pages, frame):
-    page_fault = 0
-    stack = []
+def Calculate_lru_faults(pages, total_frame):
+    fault_count = 0
+    recent_page = []
 
     for page in pages:
-        if page not in stack:
-            if len(stack) < frame:
-                stack.append(page)
+        if page not in recent_page:
+            if len(recent_page) < total_frame:
+                recent_page.append(page)
             else:
-                stack.pop(0)
-                stack.append(page)
-            page_fault += 1
+                recent_page.pop(0)
+                recent_page.append(page)
+            fault_count += 1
         else:
-            stack.remove(page)
-            stack.append(page)
+            recent_page.remove(page)
+            recent_page.append(page)
 
-    return page_fault
+    return fault_count
 
 # Optimal Page Replacement Algo
-def optimal_page_rep(pages, frame):
-    page_fault = 0
+def optimal_page_rep(pages, total_frame):
+    faults_count = 0
     memory = []
 
     for i, page in enumerate(pages):
         if page not in memory:
-            if len(memory) < frame:
+            if len(memory) < total_frame:
                 memory.append(page)
             else:
-                future_pages = pages[i+1:]
-                indices = [future_pages.index(p) if p in future_pages else float('inf') for p in memory]
+                future_page = pages[i+1:]
+                indices = [future_page.index(p) if p in future_page else float('inf') for p in memory]
                 memory.pop(indices.index(max(indices)))
                 memory.append(page)
-            page_fault += 1
+            faults_count += 1
 
-    return page_fault
+    return faults_count
 
 # Main Function to Handle User Input
 def main():
-    pages = list(map(int, input("Enter ref string (space-separated): ").split()))
+    page = list(map(int, input("Enter ref string (space-separated): ").split()))
     frame = int(input("Enter number of frame: "))
 
-    fifo_fault = fifo_page_rep(pages, frame)
-    lru_fault = lru_page_rep(pages, frame)
-    optimal_fault = optimal_page_rep(pages, frame)
+    count = Calculate_fifo_faults(page, frame)
+    fault_count = Calculate_lru_faults(page, frame)
+    faults_count = optimal_page_rep(page, frame)
 
-    print(f"FIFO Page Faults: {fifo_fault}")
-    print(f"LRU Page Faults: {lru_fault}")
-    print(f"Optimal Page Faults: {optimal_fault}")
+    print(f"FIFO Page Faults: {count}")
+    print(f"LRU Page Faults: {fault_count}")
+    print(f"Optimal Page Faults: {faults_count}")
 
     # Graphical Representation
     algorithms = ["FIFO", "LRU", "Optimal"]
-    fault = [fifo_fault, lru_fault, optimal_fault]
+    fault = [count, fault_count, faults_count]
 
     plt.bar(algorithms, fault, color=['blue', 'red', 'green'])
     plt.xlabel("Page Replacement Algorithms")
