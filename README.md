@@ -30,7 +30,7 @@ In the first cell, run this command to install dependencies:
 ```
 
 ### **3️⃣ Copy and Paste the Python Code**
-- Copy the **Python script** from [page_replacement.py](page_replacement.py)
+- Copy the **Python script** from [page_replacement.py](efficient_page_replacement.py)
 - Paste it into a new code cell in Google Colab
 - Run the cell
 
