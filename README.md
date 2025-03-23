@@ -47,9 +47,14 @@ In the first cell, run this command to install dependencies:
   LRU Page Faults: 9
   Optimal Page Faults: 7
   ```
+  Flow Chart
+
+![_- visual selection](https://github.com/user-attachments/assets/19f804af-9d1e-4fa0-8e44-c7e3c7f7e2bc)
+
 
 ### **5️⃣ View the Graphical Output**
 After execution, Google Colab will generate a **bar chart** comparing the algorithms' performance.
+![output](https://github.com/user-attachments/assets/ea261c4b-6568-4fa1-aceb-6ccb46075d18)
 
 ---
 ## 📊 Example Visualization Output
@@ -59,6 +64,8 @@ After execution, Google Colab will generate a **bar chart** comparing the algori
 - 🟢 Optimal: **7 Page Faults**  
 
 📌 **This graph helps visualize which algorithm is more efficient based on page faults.**  
+
+![_- visual selection (1)](https://github.com/user-attachments/assets/28f6a9fe-0ecf-4302-9585-3b1b0c02492d)
 
 
 ---
