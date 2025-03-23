@@ -1,6 +1,3 @@
-{
-    "FIFO_Page_Faults": 10,
-    "LRU_Page_Faults": 8,
-    "Optimal_Page_Faults": 6
-}
-
+FIFO Page Faults: 10
+LRU Page Faults: 9
+Optimal Page Faults: 7
