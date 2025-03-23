@@ -42,9 +42,9 @@ In the first cell, run this command to install dependencies:
   ```
 - **Example Output:**
   ```json
- FIFO Page Faults: 10
- LRU Page Faults: 9
- Optimal Page Faults: 7
+  FIFO Page Faults: 10
+  LRU Page Faults: 9
+  Optimal Page Faults: 7
   ```
 
 ### **5️⃣ View the Graphical Output**
@@ -65,6 +65,5 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 ## 🚀 Author  
-👤 **Ayush Kumar**  
-
+👤 **Ayush Kumar**
 
