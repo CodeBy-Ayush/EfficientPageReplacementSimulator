@@ -54,6 +54,7 @@ In the first cell, run this command to install dependencies:
 
 ### **5️⃣ View the Graphical Output**
 After execution, Google Colab will generate a **bar chart** comparing the algorithms' performance.
+
 ![output](https://github.com/user-attachments/assets/ea261c4b-6568-4fa1-aceb-6ccb46075d18)
 
 ---
