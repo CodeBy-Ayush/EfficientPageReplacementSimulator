@@ -41,7 +41,8 @@ In the first cell, run this command to install dependencies:
   Enter the number of frames: 3
   ```
 - **Example Output:**
-  ```json
+  json
+  ```
   FIFO Page Faults: 10
   LRU Page Faults: 9
   Optimal Page Faults: 7
@@ -58,6 +59,7 @@ After execution, Google Colab will generate a **bar chart** comparing the algori
 - 🟢 Optimal: **7 Page Faults**  
 
 📌 **This graph helps visualize which algorithm is more efficient based on page faults.**  
+
 
 ---
 ## 📜 License  
