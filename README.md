@@ -1,79 +1,117 @@
 # Efficient Page Replacement Algorithm Simulator
 
-## 📌 About the Project
-This project implements **three page replacement algorithms**:
-- **FIFO (First In First Out)**
-- **LRU (Least Recently Used)**
-- **Optimal Page Replacement**
+A Streamlit-based web application that simulates and compares different page replacement algorithms used in operating systems. This tool helps visualize and understand how different page replacement strategies work in memory management.
 
-It helps users understand how different memory management techniques perform by computing **total page faults** and visualizing the results using **Google Colab**.
+## 🚀 Features
 
----
-## ⚙️ Features
-✅ Implements **FIFO, LRU, and Optimal** algorithms  
-✅ Accepts **user input for frames and page references**  
-✅ Calculates **total page faults** for each algorithm  
-✅ Generates **visualization using Python Matplotlib**  
-✅ Runs directly on **Google Colab (No Local Installation Needed!)**  
-✅ Well-structured **GitHub commits for version control**  
+- **Interactive Web Interface**: Built with Streamlit for an intuitive user experience
+- **Multiple Algorithms**: Simulates three popular page replacement algorithms:
+  - First-In-First-Out (FIFO)
+  - Least Recently Used (LRU)
+  - Optimal Page Replacement
+- **Real-time Visualization**: 
+  - Bar charts comparing page faults
+  - Pie charts showing hit ratios
+  - Detailed step-by-step execution tables
+- **Customizable Parameters**:
+  - Adjustable number of memory frames
+  - Custom reference string input
+  - Algorithm selection
 
----
-## 🔧 How to Run the Code on Google Colab
-### **1️⃣ Open Google Colab and Create a New Notebook**
-1. Open [Google Colab](https://colab.research.google.com/)
-2. Click on **New Notebook**
+## 🛠️ Prerequisites
 
-### **2️⃣ Install Required Python Libraries**
-In the first cell, run this command to install dependencies:
-```python
-!pip install matplotlib numpy
+- Python 3.x
+- pip (Python package installer)
+
+## 📦 Installation
+
+1. Clone this repository:
+```bash
+git clone <repository-url>
+cd <repository-directory>
 ```
 
-### **3️⃣ Copy and Paste the Python Code**
-- Copy the **Python script** from [page_replacement.py](efficient_page_replacement.py)
-- Paste it into a new code cell in Google Colab
-- Run the cell
+2. Install the required packages:
+```bash
+pip install streamlit pandas numpy matplotlib
+```
 
-### **4️⃣ Enter User Input When Prompted**
-- **Example Input:**
-  ```
-  Enter the page reference string (space-separated): 7 0 1 2 0 3 0 4 2 3 0 3 2
-  Enter the number of frames: 3
-  ```
-- **Example Output:**
-  json
-  ```
-  FIFO Page Faults: 10
-  LRU Page Faults: 9
-  Optimal Page Faults: 7
-  ```
-  Flow Chart
+## 💻 Usage
 
-![_- visual selection](https://github.com/user-attachments/assets/19f804af-9d1e-4fa0-8e44-c7e3c7f7e2bc)
+1. Run the application:
+```bash
+streamlit run filename.py
+```
 
+2. The web interface will open in your default browser. You can then:
+   - Enter a reference string (space-separated numbers)
+   - Select the number of memory frames
+   - Choose which algorithms to simulate
+   - Click "🚀 Run Simulation" to see the results
 
-### **5️⃣ View the Graphical Output**
-After execution, Google Colab will generate a **bar chart** comparing the algorithms' performance.
+## 📝 Example Inputs & Outputs
 
-![output](https://github.com/user-attachments/assets/ea261c4b-6568-4fa1-aceb-6ccb46075d18)
+### Input Example:
+```
+Enter the page reference string (space-separated): 7 0 1 2 0 3 0 4 2 3 0 3 2
+Enter the number of frames: 3
+Select algorithms: FIFO, LRU, Optimal
+```
 
----
-## 📊 Example Visualization Output
-📊 **Page Replacement Algorithm Comparison**
-- 🔴 FIFO: **10 Page Faults**  
-- 🔵 LRU: **9 Page Faults**  
-- 🟢 Optimal: **7 Page Faults**  
+### Output Example:
+The application will display:
+- A table with the number of page faults and hit ratios for each algorithm
+- Bar charts comparing the page faults for each algorithm
+- Pie charts comparing the hit ratios for each algorithm
+- Step-by-step details of how each algorithm managed the page references
 
-📌 **This graph helps visualize which algorithm is more efficient based on page faults.**  
+## 🔍 How It Works
 
-![_- visual selection (1)](https://github.com/user-attachments/assets/28f6a9fe-0ecf-4302-9585-3b1b0c02492d)
+### FIFO (First In, First Out)
+This algorithm replaces the oldest page in memory when a page fault occurs.
 
+### LRU (Least Recently Used)
+This algorithm replaces the page that has not been used for the longest time.
 
----
-## 📜 License  
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+### Optimal Algorithm
+This algorithm replaces the page that will not be used for the longest period in the future.
 
----
-## 🚀 Author  
-👤 **Ayush Kumar**
+### Algorithm Logic
+- **Page Hits**: When a page is already in memory (cache), it counts as a page hit.
+- **Page Faults**: When a page is not in memory, it counts as a page fault. The algorithm replaces the least recently or optimally selected page.
 
+## 📊 Visualization
+
+The simulator generates visualizations to help you compare the performance of each algorithm:
+
+- **Bar Chart**: Displays the total number of page faults for each algorithm
+- **Pie Chart**: Shows the hit ratio distribution across the selected algorithms
+- **Detailed Steps**: Provides a detailed view of the state of memory for each page reference, indicating whether the page was a hit or miss
+
+## 💡 Algorithm Insights
+
+- **FIFO**: Replaces the oldest page in memory when a page fault occurs
+- **LRU**: Replaces the least recently used page
+- **Optimal**: Replaces the page that won't be used for the longest time in the future
+
+## 🤝 Contributing
+
+Feel free to open issues, contribute code, or suggest improvements!
+
+## 📱 Contact & Support
+
+If you need help or have any questions, feel free to reach out via GitHub or email.
+
+## 📝 License
+
+This project is open source and available under the MIT License. 
+
+## 👀 Screenshots
+
+*(Include your screenshots here)*
+
+### Application Interface
+*(Add your application interface screenshot)*
+
+### Output Graphs
+*(Add your output graphs screenshots)* 
