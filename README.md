@@ -8,17 +8,21 @@ A powerful Streamlit-based web application designed to simulate and compare diff
 
 ✅ **User-Friendly Web Interface**: Built with Streamlit for smooth interactivity.
 ✅ **Supports Multiple Algorithms**: Simulates three popular page replacement algorithms:
-   - 🟢 First-In-First-Out (FIFO)
-   - 🔵 Least Recently Used (LRU)
-   - 🟠 Optimal Page Replacement
-✅ **Real-Time Visualizations**:
-   - 📊 Bar charts for page fault comparison
-   - 🎯 Pie charts for hit ratio distribution
-   - 📄 Step-by-step execution logs for deeper insights
-✅ **Customizable Simulation Parameters**:
-   - Adjustable memory frame size
-   - User-defined reference string
-   - Selective algorithm execution
+  🟢 First-In-First-Out (FIFO)
+🔵 Least Recently Used (LRU)
+🟠 Optimal Page Replacement
+
+✅ Real-Time Visualizations:
+📊 Bar Charts – Compare page faults across algorithms at a glance
+🎯 Pie Charts – Visualize hit ratio distribution for better insights
+📄 Step-by-Step Execution Logs – Track algorithm behavior in real time
+
+✅ Customizable Simulation Parameters:
+⚙️ Adjustable Memory Frame Size – Fine-tune simulations for different scenarios
+📜 User-Defined Reference String – Test with custom input patterns
+✅ Selective Algorithm Execution – Run one or multiple algorithms as needed
+
+🚀 Experience a powerful and interactive page replacement simulator!
 
 ---
 
