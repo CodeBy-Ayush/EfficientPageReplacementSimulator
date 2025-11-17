@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Page Replacement Algorithm Simulator
+Pages Replacement Algorithm Simulator
 
 This script provides an interactive Streamlit application to simulate 
 and compare different page replacement algorithms.
