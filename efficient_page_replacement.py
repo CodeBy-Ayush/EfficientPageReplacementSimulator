@@ -131,7 +131,7 @@ def main():
     # Title
     st.title("💾 Page Replacement Algorithm Simulator")
     st.markdown("""
-    ### Explore Different Page Replacement Strategies
+    ### Explore Different Page Replacements Strategies
     Compare FIFO, LRU, and Optimal algorithms to understand memory management techniques.
     """)
 
@@ -141,7 +141,7 @@ def main():
     # Ref String Input
     default_ref_string = "7 0 1 2 0 3 4 2 3 0 3 2"
     reference_string = st.sidebar.text_input(
-        "Enter Reference String", 
+        "Enter References String", 
         value=default_ref_string
     )
 
