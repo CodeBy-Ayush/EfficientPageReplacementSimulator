@@ -56,7 +56,7 @@ class PageReplacement:
         for page in pages:
             if page in page_cache:
                 page_hits += 1
-                # Move the page to the end to show it's most recently used
+                # Move the pages to the end to show it's most recently used
                 page_cache.move_to_end(page)
                 steps.append({
                     'page': page, 
@@ -66,7 +66,7 @@ class PageReplacement:
             else:
                 page_faults += 1
                 if len(page_cache) >= total_frames:
-                    # Remove the least recently used item (first item)
+                    # Remove the least recent used item (first item)
                     page_cache.popitem(last=False)
                 
                 page_cache[page] = None
