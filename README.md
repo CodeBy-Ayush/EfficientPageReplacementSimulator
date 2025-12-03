@@ -12,7 +12,7 @@ A powerful Streamlit-based web application designed to simulate and compare diff
 🔵 Least Recently Used (LRU)
 🟠 Optimal Page Replacement
 
-✅ Real-Time Visualizations:
+✅ Real-Time Visualization:
 📊 Bar Charts – Compare page faults across algorithms at a glance
 🎯 Pie Charts – Visualize hit ratio distribution for better insights
 📄 Step-by-Step Execution Logs – Track algorithm behavior in real time
@@ -31,7 +31,7 @@ A powerful Streamlit-based web application designed to simulate and compare diff
 Ensure you have the following installed before running the application:
 
 - 🐍 Python 3.x
-- 📦 pip (Python package installer)
+- 📦 pip (Python packages installer)
 
 ---
 
@@ -76,7 +76,7 @@ Number of Frames: 3
 Selected Algorithms: FIFO, LRU, Optimal
 ```
 
-### 📊 Example Output:
+### 📊 Example Outputs:
 The applications will display:
 - 📋 A summary table with page faults and hit ratios for each algorithm.
 - 📊 Bar chart comparing page faults across different algorithms.
